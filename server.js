@@ -1,11 +1,15 @@
-const app = require('./app')
 const express = require('express')
+const app = express()
 const client = require('./client/client')
 
 app.use('/css', express.static('./css'));
 app.use('/fonts', express.static('./fonts'));
 app.use('/imgs', express.static('./imgs'));
 app.use('/javascript', express.static('./javascript'));
+
+const port = process.env.PORT || 3000
+
+app.set('view engine', 'ejs')
 
 app.get('/', async (req, res) => {
 
@@ -32,3 +36,6 @@ app.get('/contacts', (req, res) => {
 app.get('/services', (req, res) => {
     res.render('services')
 })
+
+
+app.listen(port, () => console.log(`Listen on port ${port}`))
