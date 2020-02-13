@@ -1,0 +1,162 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <title>Don's Barbershop - Home</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top home">
+    <div class="container-fluid mx-5">
+      <a class="navbar-brand" href="/">Don's Barbershop</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contacts">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link book-now" href="/book-now">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="background"></div>
+
+  <div class="container">
+
+  </div>
+
+  <div class="container text-center">
+    <h1 class="heading">OUR SERVICES</h1>
+    <p class="w-75 mx-auto description">Don's Barbershop offers world-class men's haircuts, beard grooming, and hot
+      razor shaves. Here are just some of the services we are known for.</p>
+  </div>
+
+  <div class="container home-services text-center mt-5">
+    <div class="row">
+      <% services.forEach((service) => { %>
+      <div class="col-12 col-lg-4">
+        <img class="m-5 d-block mx-auto" src=<%= service.image_url %> alt=<%= service.name%>>
+        <a href="/services"><%= service.name%></a>
+        <p><%= service.description%></p>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <div class="container-fluid text-center">
+    <h1 class="heading">OUR BARBERS</h1>
+    <p class="w-50 mx-auto description">We employ only highly qualified barbers who are not just professionals, but also
+      enjoy maintaining the atmosphere of a classic barbershop.</p>
+
+    <div class="row">
+      <% barbers.forEach((barber) => { %>
+      <div class="col-12 col-lg-6 col-xl-3 my-3">
+        <div class="card mx-auto" style="width: 18rem;">
+          <% if (barber.image_url) { %>
+            <img class="card-img-top" src=<%= barber.image_url%>>
+          <% } %>
+          <div class="card-body">
+            <h5 class="card-title mx-auto"><%= barber.name%></h5>
+            <p class="card-text mx-auto"><%= barber.short_description%></p>
+
+            <!-- <p><%= barber.id %></p> -->
+            <div class="barber-social">
+              <% if (barber.facebook) { %>
+                <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
+                  class="fab fa-instagram"></i></a>
+              <% } %>
+              <% if (barber.instagram) { %>
+                <a target="_blank" href=<%= barber.instagram %>/a><i
+                  class="fab fa-instagram"></i></a>
+              <% } %>
+              <% if (barber.linkedin) { %>
+                <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
+                  class="fab fa-instagram"></i></a>
+              <% } %>
+              <% if (barber.twitter) { %>
+                <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
+                  class="fab fa-instagram"></i></a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <h1 class="heading">TESTIMONIALS</h1>
+    <p class="w-75 mx-auto description">These reviews that our clients have recently submitted are the best way to
+      learn
+      more about our barbershop’s level of service and customer support.</p>
+
+    <% testimonials.forEach((testimonial) => { %>
+      
+    <% }) %>
+  </div>
+
+  <div class="container footer text-center mt-5">
+    <h4>Don's Barbershop</h4>
+
+    <ul class="nav justify-content-center d-flex mt-5">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contacts">Contacts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/services">Services</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container mt-3 text-center social mb-5">
+    <a target="_blank" class="mr-2" href="https://www.facebook.com/Donsbarbershopofking/?fref=ts"><i
+        class="fab fa-facebook-f"></i></a>
+    <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
+        class="fab fa-instagram"></i></a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/50e641aaff.js" crossorigin="anonymous"></script>
+  <script src="../javascript/home.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

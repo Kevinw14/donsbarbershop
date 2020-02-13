@@ -1,0 +1,134 @@
+// Employees
+[
+    {
+        "name": "Jamey Adkins",
+        "bio": "A life-long resident of King, Jamey graduated from Barber School in 1997. His career started in the basement cutting hair for friends (free) before attending Barber School. After working at a few shops in Winston-Salem, Jamey opened Thruway Barbershop in Mt Airy in 2009. When the opportunity arose to be a part of the Don’s Barbershop Team, Jamey jumped at the chance. Now he is close to home and can spend more time with his beautiful wife, Christy, and his 4 youngsters. Jamey’s excellent barber skills coupled with his passion for customer service make him a perfect fit at Don’s Barbershop in King, NC.",
+        "admin": true,
+        "image": "",
+        "isShowing": true,
+        "stripe_appointment_url": "https://squareup.com/appointments/book/63df0970-0549-4561-961d-d30a7b9e861a/4SXNXPBRP7RRZ/services"
+    },
+    {
+        "name": "Nathan Rose",
+        "bio": "",
+        "admin": false,
+        "image": "",
+        "isShowing": true,
+        "stripe_appointment_url": ""
+    },
+    {
+        "name": "Jake Ganey",
+        "bio": "",
+        "admin": false,
+        "image": "",
+        "isShowing": true,
+        "stripe_appointment_url": ""
+    },
+    {
+        "name": "",
+        "bio": "",
+        "admin": false,
+        "image": "",
+        "isShowing": true,
+        "stripe_appointment_url": ""
+    }
+]
+// Services
+[
+    {
+        "name": "Beard Trim",
+        "duration": 15,
+        "price": 8,
+        "info": "Beard trim and line up using clippers."
+    },
+    {
+        "name": "Touch Up",
+        "duration": 15,
+        "price": 8,
+        "info": "Clean up around the ears and taper/block the neck with a neck shave."
+    },
+    {
+        "name": "Men's Haircut",
+        "duration": 30,
+        "price": 16
+    },
+    {
+        "name": "Haircut",
+        "duration": 30,
+        "price": 16
+    },
+    {
+        "name": "Beard Trim W/ Straight Razor Clean Up",
+        "duration": 30,
+        "price": 21,
+        "info": "Beard trim with straight razor shave."
+    },
+    {
+        "name": "Shave",
+        "duration": 30,
+        "price": 16,
+        "info": "Hot lather, steam towel and a straight razor face shave."
+    },
+    {
+        "name": "Flat Top",
+        "duration": 30,
+        "price": 16
+    },
+    {
+        "name": "Fade",
+        "duration": 30,
+        "price": 16,
+        "info": "Skin tight or just a close fade."
+    },
+    {
+        "name": "Child's Haircut",
+        "duration": 30,
+        "price": 16
+    },
+    {
+        "name": "Head Shave",
+        "duration": 30,
+        "price": 16
+    },
+    {
+        "name": "Neck Shave Only",
+        "duration": 5,
+        "price": 4,
+        "info": "Just the old fashion hot lather and straight razor neck shave."
+    },
+]
+// Testimonials
+[
+    {
+        "text": "I always feel like a VIP at Don’s and get a great haircut every time.",
+        "name": " Larry Wise"
+    },
+    {
+        "text": "I’ve never been there and don’t have a visit scheduled.",
+        "name": "Cousin It"
+    },
+    {
+        "text": "Hey Jamey, thanks for the ear lowering today, bro. Good see’n ya.",
+        "name": "Derek Hall"
+    },
+    {
+        "text": "Great location, good hours, great barbers and Jamey is a good guy.",
+        "name": "Jimmy Mcmickle"
+    },
+    {
+        "text": "High class. Nothing but the best.",
+        "name": "Image Solutions"
+    },
+    {
+        "text": "Best hair cut and great people to talk with and visit.",
+        "name": "John Cox"
+    },
+    {
+        "text": "Finally a good hair cut and a “for real” barber",
+        "name": "Blake Fernnet"
+    },
+    {
+        "text": "Jamey, Bryson absolutely loved his hair cut from you and said you didn’t pull his hair when you cut it. We will be back soon. Keep up the good work.",
+        "name": "Heather Anderson"
+    },
+]

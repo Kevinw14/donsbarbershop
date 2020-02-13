@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Jaapokki';
+    src: url('../fonts/jaapokki.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar .navbar-nav .nav-item .book-now {
+    border-radius: 35px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-family: 'Jaapokki';
+    font-size: 16px;
+    color: #fff;
+    background: #aa9144;
+    border-color: #aa9144;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Jaapokki';
+    font-size: 25px;
+    color: #000;
+}
+
+.home .navbar-brand {
+    font-family: 'Jaapokki';
+    font-size: 25px;
+    color: #f1f1f1;
+}
+
+.home .navbar-nav .nav-item .nav-link {
+    font-family: 'Jaapokki';
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-family: 'Jaapokki';
+    font-size: 18px;
+    color: #000;
+}
+
+.home .navbar-nav .nav-item .nav-link:hover {
+    color: #f1f1f1;
+}
+
+.home .navbar-nav .active .nav-link:hover {
+    color: #aa9144;
+}
+
+.navbar .navbar-brand:hover {
+    font-family: 'Jaapokki';
+    font-size: 25px;
+    color: #000;
+}
+
+.home .navbar-brand:hover {
+    color: #f1f1f1;
+}
+
+.navbar .home .nav-item .nav-link {
+    font-family: 'Jaapokki';
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.nav .nav-item .nav-link {
+    font-family: 'Jaapokki';
+    color: #999;
+    font-size: 16px;
+    letter-spacing: .1em;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: #000;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #aa9144;
+}
+
+.nav .active>.nav-link {
+    color: #aa9144;
+}
+
+.background {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('../imgs/chairs.jpg');
+    height: 50%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0% 40%;
+    background-size: cover;
+}
+
+.background h1 {
+    font-family: 'Jaapokki';
+    font-size: 65px;
+    color: #fff;
+    letter-spacing: 0em;
+}
+  
+h1 {
+    font-family: 'Jaapokki';
+    font-size: 36px;
+    letter-spacing: .2em;
+    color: #000;
+}
+
+.heading {
+    margin-top: 10%;
+}
+
+.content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    color: #f1f1f1;
+    width: 100%;
+}
+
+body {
+    background-color: #e8eddf;
+}
+
+.description {
+    font-family: 'roboto mono';
+    font-size: 14px;
+    color: #999;
+}
+
+.footer h4 {
+    font-family: 'Jaapokki';
+    font-size: 25px;
+}
+
+.social a {
+    font-size: 16px;
+    color: #999;
+}
+
+.home-services a {
+    font-family: 'Jaapokki';
+    font-size: 14px;
+    letter-spacing: .2em;
+    color: #000;
+}
+
+.home-services p {
+    font-family: 'roboto mono';
+    font-size: 13px;
+    color: #999;
+}
+
+.home-services a:hover {
+    color: #aa9144;
+    text-decoration: none;
+}
+
+.card-title {
+    font-family: 'Jaapokki';
+    font-size: 14px;
+    letter-spacing: .2em;
+    color: #000;
+}
+
+.home-services p {
+    font-family: 'roboto mono';
+    font-size: 13px;
+    color: #999;
+}
+
+.card p {
+    font-family: 'roboto mono';
+    font-size: 13px;
+    color: #999;
+}
+
+.card-title:hover {
+    color: #aa9144;
+    text-decoration: none;
+}
+
+.card-title:focus {
+    outline: 0;
+}
+
+.card-body button {
+    border-style: none;
+    background-color: white;
+}
+
+.background-red {
+    background-color: red;
+}
+
+.barber-social a {
+    font-size: 16px;
+    color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
