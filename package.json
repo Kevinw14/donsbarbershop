@@ -15,7 +15,9 @@
     "pg": "^7.18.1"
   },
   "devDependencies": {},
-  "scripts": {},
+  "scripts": {
+    "start": "node server.js"
+  },
   "author": "Kevin Wood",
   "license": "MIT"
 }
