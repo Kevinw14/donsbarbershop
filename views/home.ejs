@@ -13,7 +13,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top home">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid mx-5">
       <a class="navbar-brand" href="/">Don's Barbershop</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -77,28 +77,29 @@
       <div class="col-12 col-lg-6 col-xl-3 my-3">
         <div class="card mx-auto" style="width: 18rem;">
           <% if (barber.image_url) { %>
-            <img class="card-img-top" src=<%= barber.image_url%>>
+          <img class="card-img-top" src=<%= barber.image_url%>>
           <% } %>
           <div class="card-body">
             <h5 class="card-title mx-auto"><%= barber.name%></h5>
+            <!-- <button class="card-title mx-auto"><%= barber.name %></button> -->
             <p class="card-text mx-auto"><%= barber.short_description%></p>
+            <!-- <p class="card-text mx-auto"><%= barber.id%></p> -->
 
             <!-- <p><%= barber.id %></p> -->
             <div class="barber-social">
               <% if (barber.facebook) { %>
-                <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
+              <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
                   class="fab fa-instagram"></i></a>
               <% } %>
               <% if (barber.instagram) { %>
-                <a target="_blank" href=<%= barber.instagram %>/a><i
-                  class="fab fa-instagram"></i></a>
+              <a target="_blank" href=<%= barber.instagram %>/a><i class="fab fa-instagram"></i></a>
               <% } %>
               <% if (barber.linkedin) { %>
-                <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
+              <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
                   class="fab fa-instagram"></i></a>
               <% } %>
               <% if (barber.twitter) { %>
-                <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
+              <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
                   class="fab fa-instagram"></i></a>
               <% } %>
             </div>
@@ -106,57 +107,69 @@
         </div>
       </div>
       <% }) %>
-    </div>
-  </div>
 
-  <div class="container text-center">
-    <h1 class="heading">TESTIMONIALS</h1>
-    <p class="w-75 mx-auto description">These reviews that our clients have recently submitted are the best way to
-      learn
-      more about our barbershop’s level of service and customer support.</p>
+      <div class="container text-center">
+        <h1 class="heading">TESTIMONIALS</h1>
+        <p class="w-75 mx-auto description">These reviews that our clients have recently submitted are the best way to
+          learn
+          more about our barbershop’s level of service and customer support.</p>
 
-    <% testimonials.forEach((testimonial) => { %>
-      
-    <% }) %>
-  </div>
+        <div id="carouselExampleControls" class="carousel slide bg-light my-5 py-5" data-ride="carousel">
+          <div class="carousel-inner">
+            <% testimonials.forEach((testimonial) => { %>
+            <div class="carousel-item">
+              <h5 class="mb-3"><%= testimonial.description%></h5>
+              <p class="w-50 mx-auto"><%= testimonial.name%></p>
+            </div>
+            <% }) %>
 
-  <div class="container footer text-center mt-5">
-    <h4>Don's Barbershop</h4>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <i class="fas fa-long-arrow-alt-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <i class="fas fa-long-arrow-alt-right"></i>
+            </a>
+          </div>
 
-    <ul class="nav justify-content-center d-flex mt-5">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contacts">Contacts</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/services">Services</a>
-      </li>
-    </ul>
-  </div>
+        </div>
 
-  <div class="container mt-3 text-center social mb-5">
-    <a target="_blank" class="mr-2" href="https://www.facebook.com/Donsbarbershopofking/?fref=ts"><i
-        class="fab fa-facebook-f"></i></a>
-    <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
-        class="fab fa-instagram"></i></a>
-  </div>
+        <div class="container footer text-center mt-5">
+          <h4>Don's Barbershop</h4>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/50e641aaff.js" crossorigin="anonymous"></script>
-  <script src="../javascript/home.js" crossorigin="anonymous"></script>
+          <ul class="nav justify-content-center d-flex mt-5">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacts">Contacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container mt-3 text-center social mb-5">
+          <a target="_blank" class="mr-2" href="https://www.facebook.com/Donsbarbershopofking/?fref=ts"><i
+              class="fab fa-facebook-f"></i></a>
+          <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+          integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+          integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+          crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/50e641aaff.js" crossorigin="anonymous"></script>
+        <script src="../javascript/home.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

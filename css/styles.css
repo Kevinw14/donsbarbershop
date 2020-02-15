@@ -5,6 +5,7 @@
     font-style: normal;
 }
 
+/* NavBar */
 .navbar .navbar-nav .nav-item .book-now {
     border-radius: 35px;
     padding-left: 32px;
@@ -19,46 +20,16 @@
     margin-right: 10px;
 }
 
-.navbar .navbar-brand {
-    font-family: 'Jaapokki';
-    font-size: 25px;
-    color: #000;
-}
-
-.home .navbar-brand {
-    font-family: 'Jaapokki';
-    font-size: 25px;
-    color: #f1f1f1;
-}
-
-.home .navbar-nav .nav-item .nav-link {
-    font-family: 'Jaapokki';
-    font-size: 18px;
-    color: #f1f1f1;
-}
-
 .navbar-nav .nav-item .nav-link {
     font-family: 'Jaapokki';
     font-size: 18px;
     color: #000;
 }
 
-.home .navbar-nav .nav-item .nav-link:hover {
-    color: #f1f1f1;
-}
-
-.home .navbar-nav .active .nav-link:hover {
-    color: #aa9144;
-}
-
 .navbar .navbar-brand:hover {
     font-family: 'Jaapokki';
     font-size: 25px;
     color: #000;
-}
-
-.home .navbar-brand:hover {
-    color: #f1f1f1;
 }
 
 .navbar .home .nav-item .nav-link {
@@ -86,6 +57,13 @@
     color: #aa9144;
 }
 
+.navbar .navbar-brand {
+    font-family: 'Jaapokki';
+    font-size: 25px;
+    color: #000;
+}
+
+/* Background */
 .background {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url('../imgs/chairs.jpg');
     height: 50%;
@@ -102,6 +80,7 @@
     letter-spacing: 0em;
 }
   
+/* Content */
 h1 {
     font-family: 'Jaapokki';
     font-size: 36px;
@@ -131,6 +110,7 @@ body {
     color: #999;
 }
 
+/* Footer */
 .footer h4 {
     font-family: 'Jaapokki';
     font-size: 25px;
@@ -141,6 +121,7 @@ body {
     color: #999;
 }
 
+/* Services On Home Page */
 .home-services a {
     font-family: 'Jaapokki';
     font-size: 14px;
@@ -159,6 +140,19 @@ body {
     text-decoration: none;
 }
 
+.home-services p {
+    font-family: 'roboto mono';
+    font-size: 13px;
+    color: #999;
+}
+
+/* Barber Cards */
+.card p {
+    font-family: 'roboto mono';
+    font-size: 13px;
+    color: #999;
+}
+
 .card-title {
     font-family: 'Jaapokki';
     font-size: 14px;
@@ -166,34 +160,18 @@ body {
     color: #000;
 }
 
-.home-services p {
-    font-family: 'roboto mono';
-    font-size: 13px;
-    color: #999;
-}
-
-.card p {
-    font-family: 'roboto mono';
-    font-size: 13px;
-    color: #999;
+/* .card-title {
+    background-color: white;
+    border-style: none;
 }
 
 .card-title:hover {
     color: #aa9144;
     text-decoration: none;
-}
+} */
 
 .card-title:focus {
     outline: 0;
-}
-
-.card-body button {
-    border-style: none;
-    background-color: white;
-}
-
-.background-red {
-    background-color: red;
 }
 
 .barber-social a {
@@ -201,4 +179,25 @@ body {
     color: #000;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.carousel-item h5 {
+    font-family: 'Jaapokki';
+    font-size: 20px;
+    letter-spacing: .2em;
+    color: #000;
+}
+
+.carousel-item p {
+    font-family: 'roboto mono';
+    font-size: 13px;
+    color: #999; 
+}
+
+.carousel-control-prev {
+    color: #999
+}
+
+.carousel-control-next {
+    color: #999
 }
