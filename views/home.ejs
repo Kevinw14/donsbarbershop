@@ -45,23 +45,23 @@
 
   <div class="background"></div>
 
-  <div class="container">
-
-  </div>
-
   <div class="container text-center">
     <h1 class="heading">OUR SERVICES</h1>
     <p class="w-75 mx-auto description">Don's Barbershop offers world-class men's haircuts, beard grooming, and hot
       razor shaves. Here are just some of the services we are known for.</p>
   </div>
 
-  <div class="container home-services text-center mt-5">
+  <div class="container home-services text-center">
     <div class="row">
       <% services.forEach((service) => { %>
       <div class="col-12 col-lg-4">
-        <img class="m-5 d-block mx-auto" src=<%= service.image_url %> alt=<%= service.name%>>
-        <a href="/services"><%= service.name%></a>
-        <p><%= service.description%></p>
+        <a href="/services">
+          <img class="m-5 d-block mx-auto" src=<%= service.image_url %> alt=<%= service.name%>>
+          <h6><%= service.name%></h6>
+          <p><%= service.description%></p>
+        </a>
+        <!-- <a href="/services"><%= service.name%></a> -->
+        <!-- <p><%= service.description%></p> -->
       </div>
       <% }) %>
     </div>
@@ -92,7 +92,7 @@
                   class="fab fa-instagram"></i></a>
               <% } %>
               <% if (barber.instagram) { %>
-              <a target="_blank" href=<%= barber.instagram %>/a><i class="fab fa-instagram"></i></a>
+              <a target="_blank" href=<%= barber.instagram %>/a> <i class="fab fa-instagram"></i></a>
               <% } %>
               <% if (barber.linkedin) { %>
               <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
@@ -133,6 +133,8 @@
 
         </div>
 
+        <div class="container-fluid" id="map"></div>
+
         <div class="container footer text-center mt-5">
           <h4>Don's Barbershop</h4>
 
@@ -169,6 +171,8 @@
           integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
           crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/50e641aaff.js" crossorigin="anonymous"></script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCulSbUC90CDBt8NLkNxwrRE1yl4WUjUq0&callback=initMap"></script>
         <script src="../javascript/home.js" crossorigin="anonymous"></script>
 </body>
 

@@ -37,5 +37,9 @@ app.get('/services', (req, res) => {
     res.render('services')
 })
 
+app.get('/book-now', (req, res) => {
+    res.send('Hi Ashlyn')
+})
+
 
 app.listen(port, () => console.log(`Listen on port ${port}`))
