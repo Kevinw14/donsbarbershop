@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
         const barbers = (await client.query('select * from barbers order by map')).rows
         const testimonials = (await client.query('select * from testimonials')).rows
 
-        res.render('home', {services: services, barbers: barbers, testimonials: testimonials})
+        res.render('home', {services: services, barbers: barbers, testimonials: testimonials })
 
     } catch (error) {
         console.log(error)
@@ -33,8 +33,15 @@ app.get('/contacts', (req, res) => {
     res.render('contact')
 })
 
-app.get('/services', (req, res) => {
-    res.render('services')
+app.get('/services', async (req, res) => {
+    try {
+        const services = (await client.query('select * from services')).rows
+
+        res.render('services', { services: services })
+
+    } catch (error) {
+        console.log(error)
+    }
 })
 
 app.get('/book-now', (req, res) => {

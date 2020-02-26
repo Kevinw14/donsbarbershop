@@ -51,17 +51,16 @@
       razor shaves. Here are just some of the services we are known for.</p>
   </div>
 
-  <div class="container home-services text-center">
+  <div class="container home-services text-center mb-5">
     <div class="row">
       <% services.forEach((service) => { %>
       <div class="col-12 col-lg-4">
         <a href="/services">
           <img class="m-5 d-block mx-auto" src=<%= service.image_url %> alt=<%= service.name%>>
           <h6><%= service.name%></h6>
-          <p><%= service.description%></p>
         </a>
-        <!-- <a href="/services"><%= service.name%></a> -->
-        <!-- <p><%= service.description%></p> -->
+        <p><%= service.description%></p>
+
       </div>
       <% }) %>
     </div>
@@ -154,27 +153,26 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="container-fluid footer text-center">
+    <h4 class="pt-5">Don's Barbershop</h4>
 
-    <div class="container footer text-center mt-5">
-      <h4>Don's Barbershop</h4>
+    <ul class="nav justify-content-center d-flex mt-5">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contacts">Contacts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/services">Services</a>
+      </li>
+    </ul>
 
-      <ul class="nav justify-content-center d-flex mt-5">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contacts">Contacts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/services">Services</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="container mt-3 text-center social mb-5">
+    <div class="container mt-3 text-center social">
       <a target="_blank" class="mr-2" href="https://www.facebook.com/Donsbarbershopofking/?fref=ts"><i
           class="fab fa-facebook-f"></i></a>
       <a target="_blank" href="https://www.instagram.com/j.donsbarbershop59/?igshid=18w2iv4f5w46"><i
