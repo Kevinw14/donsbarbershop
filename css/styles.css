@@ -273,3 +273,57 @@ h4 {
 hr {
     width: 50%;
 }
+
+.navbar P {
+    font-size: 1.125rem;
+    width: 95px;
+    font-family: 'Jaapokki';
+}
+
+.navbar span {
+    font-size: 0.875rem;
+    font-family: 'Jaapokki';
+
+}
+
+.steps {
+    letter-spacing: 0.9rem;
+}
+
+.position-center {
+    left: 50%;
+    top: -35%;
+    transform: translateX(-50%);
+}
+
+.negative-margin {
+    margin-top: -10%;
+}
+
+.appointment-progress {
+    margin-top: 0.9%;
+}
+
+.appointment-progress span {
+    color: black;
+}
+
+.appointment-progress p {
+    color: black;
+}
+
+.bg-gold {
+    background-color: #aa9144;
+}
+
+.progress {
+    background-color: black;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 5px;
+}
+
+.almost-done {
+    margin-top: 1.8%;
+    color: black;
+}

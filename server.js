@@ -7,7 +7,7 @@ app.use('/fonts', express.static('./fonts'));
 app.use('/imgs', express.static('./imgs'));
 app.use('/javascript', express.static('./javascript'));
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 
 app.set('view engine', 'ejs')
 
@@ -45,7 +45,10 @@ app.get('/services', async (req, res) => {
 })
 
 app.get('/book-now', (req, res) => {
-    res.send('Hi Ashlyn')
+    // res.render('appointmentservice')
+    // res.render('appointmentbarber')
+    // res.render('appointmentdate')
+    res.render('appointmentconfirm')
 })
 
 
