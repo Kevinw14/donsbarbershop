@@ -21,6 +21,25 @@
     margin-right: 10px;
 }
 
+.book-now {
+    border-radius: 35px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-family: 'Jaapokki';
+    font-size: 16px;
+    color: #fff;
+    background: #aa9144;
+    border-color: #aa9144;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.book-now:hover {
+    background: #aa9144;
+    border-color: #aa9144;
+}
+
 .navbar-nav .nav-item .nav-link {
     font-family: 'Jaapokki';
     font-size: 18px;
