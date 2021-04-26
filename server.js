@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const client = require('./client/client')
 const LocalStrategy = require('passport-local').Strategy
 const session = require('express-session');
+const port = 4000
 
 app.use('/css', express.static('./css'));
 app.use('/fonts', express.static('./fonts'));
@@ -25,7 +26,6 @@ function isLoggedIn(req, res, next) {
     if (!req.isAuthenticated()) {
         return res.redirect('/login')
     }
-
     return next()
 }
 
@@ -48,19 +48,18 @@ passport.deserializeUser(async (id, done) => {
     done(null, user)
 })
 
-const port = process.env.PORT || 4000
-
 app.get('/', async (req, res) => {
 
     try {
-        const services = (await client.query('select * from services')).rows
-        const barbers = (await client.query('select * from barbers order by map')).rows
-        const testimonials = (await client.query('select * from testimonials')).rows
-
+        let testimonialData = await client.query('select * from testimonials')
+        let testimonials = testimonialData.rows
+        let barberData = await client.query('select * from barbers order by map')
+        let barbers = barberData.rows
+        let servicesData = await client.query('select * from services')
+        let services = servicesData.rows
         res.render('home', { services: services, barbers: barbers, testimonials: testimonials })
-
     } catch (error) {
-        console.log(error)
+        console.log("Error ", error)
     }
 })
 
@@ -84,9 +83,6 @@ app.get('/services', async (req, res) => {
 })
 
 app.get('/book-now', (req, res) => {
-    // res.render('appointmentservice')
-    // res.render('appointmentbarber')
-    // res.render('appointmentdate')
     res.render('appointmentconfirm')
 })
 
